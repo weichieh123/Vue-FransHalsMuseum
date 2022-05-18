@@ -6,6 +6,9 @@
   width: calc(100% - 52px);
   height: fit-content;
   // overflow: hidden;
+  @include desktop {
+    width: 100vw;
+  }
   .hero-section {
     width: 100%;
     height: 380px;
@@ -144,11 +147,11 @@
     height: 890px;
     background-color: $color_orange;
     position: relative;
-    // @include desktop {
-    //   display: flex;
-    //   flex-wrap: wrap;
-    //   height: 1450px;
-    // }
+    @include desktop {
+      display: flex;
+      flex-wrap: wrap;
+      height: 1450px;
+    }
     .left {
       @extend %stickyPic;
     }
@@ -195,9 +198,9 @@
     position: relative;
     .left {
       @extend %stickyPic;
-      // @include desktop {
-      //   display: none;
-      // }
+      @include desktop {
+        display: none;
+      }
     }
     .right {
       @extend %rightArea;
@@ -269,10 +272,16 @@
     justify-content: center;
     align-items: stretch;
     text-align: center;
+    @include desktop {
+      height: 1000px;
+    }
     .footer-card {
       width: 50%;
       padding: 20px;
       height: 250px;
+      @include desktop {
+        width: 100%;
+      }
       span {
         width: 100%;
       }
@@ -307,6 +316,9 @@
       }
       &.left {
         border-right: 2px solid $color_dark;
+        @include desktop {
+          border: none;
+        }
       }
       &.right {
         display: flex;
@@ -329,8 +341,28 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
+      @include desktop {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: stretch;
+        width: 80%;
+        // height: fit-content;
+      }
       .footer-menu {
         display: flex;
+        @include desktop {
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+          &.first {
+            border-top: 2px solid $color_dark;
+          }
+          &.second {
+            border-bottom: 2px solid $color_dark;
+
+          }
+        }
         .icon {
           width: 20px;
           height: 20px;

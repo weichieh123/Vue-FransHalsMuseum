@@ -9,21 +9,21 @@ $color_orange: #f37449;
 $color_lightOrange: #F29C50;
 $color_purple: #a385bd;
 
-// @mixin desktop {
-//   @media (max-width: 1020px){
-//       @content;
-//   }
-// }
-// @mixin pad {
-//   @media (max-width: 768px){
-//       @content;
-//   }
-// }
-// @mixin mobile {
-//   @media (max-width: 320px){
-//       @content;
-//   }
-// }
+@mixin desktop {
+  @media (max-width: 1020px){
+      @content;
+  }
+}
+@mixin pad {
+  @media (max-width: 768px){
+      @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: 320px){
+      @content;
+  }
+}
 
 * {
   box-sizing: border-box;
@@ -37,11 +37,11 @@ $color_purple: #a385bd;
   position: -webkit-sticky;
   top: 0;
   left: 0;
-  // @include desktop {
-  //   position: relative;
-  //   width: 100vw;
-  //   height: 400px;
-  // }
+  @include desktop {
+    position: relative;
+    width: 100vw;
+    height: 400px;
+  }
   .pic {
     height: 50vh;
     overflow: hidden;
@@ -59,10 +59,10 @@ $color_purple: #a385bd;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  // @include desktop {
-  //   position: relative;
-  //   width: 100vw;
-  // }
+  @include desktop {
+    position: relative;
+    width: 100vw;
+  }
   h2 {
     width: 100%;
     font-size: 100px;

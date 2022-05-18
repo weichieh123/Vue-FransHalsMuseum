@@ -144,12 +144,12 @@
         </div>
       </div>
       <div class="footer-row">
-        <div class="footer-menu">
+        <div class="footer-menu first">
           <div class="icon"><img :src="footerIcon1" alt=""></div>
           <div class="icon"><img :src="footerIcon2" alt=""></div>
           <div class="icon"><img :src="footerIcon3" alt=""></div>
         </div>
-        <div class="footer-menu">
+        <div class="footer-menu second">
           <ul>
             <li>Term</li>
             <li>About us</li>
@@ -159,7 +159,7 @@
             <li>Curators</li>
           </ul>
         </div>
-        <div class="footer-menu">
+        <div class="footer-menu third">
           <div class="logo"></div>
           <div class="logo"></div>
         </div>

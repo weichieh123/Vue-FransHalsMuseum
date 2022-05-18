@@ -28,7 +28,7 @@ const isOpen = ref(false);
 <style lang="scss" scoped>
 .nav {
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
   z-index: 99;
   width: 52px;
@@ -38,12 +38,19 @@ const isOpen = ref(false);
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @include desktop {
+    height: 52px;
+    width: 100vw;
+    flex-direction: row;
+    justify-content: space-around;
+  }
   .button {
     color: $color_yellow;
     width: 24px;
     padding: 10px;
     margin: 5px 0;
     box-sizing: content-box;
+    cursor: pointer;
     &.rotate {
       transform: rotate(-45deg);
     }
@@ -56,6 +63,7 @@ const isOpen = ref(false);
     border-radius: 100%;
     border: 5px solid $color_dark;
     margin-right: -10px;
+    cursor: pointer;
     .line {
       display: block;
       position: absolute;
