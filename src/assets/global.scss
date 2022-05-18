@@ -32,7 +32,7 @@ $h2-font-sizes: (
   null  : 50px,
   480px : 60px,
   640px : 80px,
-  1024px: 100px
+  1024px: 90px
 );
 $h4-font-sizes: (
   null  : 18px,
@@ -83,12 +83,12 @@ h5 {
   }
 }
 @mixin pad {
-  @media (max-width: 768px){
+  @media (max-width: 640px){
       @content;
   }
 }
 @mixin mobile {
-  @media (max-width: 320px){
+  @media (max-width: 480px){
       @content;
   }
 }
@@ -113,6 +113,9 @@ h5 {
   .pic {
     height: 50vh;
     overflow: hidden;
+    @include desktop {
+      height: 200px;
+    }
     img {
       width: 100%;
     }
@@ -130,9 +133,13 @@ h5 {
   @include desktop {
     position: relative;
     width: 100vw;
+    height: fit-content;
   }
   h2 {
     width: 100%;
     margin: 60px 0;
+    @include pad {
+      margin: 40px 0;
+    }
   }
 }

@@ -148,7 +148,14 @@
     @include desktop {
       display: flex;
       flex-wrap: wrap;
-      height: 1450px;
+      height: 1250px;
+      align-content: flex-start;
+    }
+    @include pad {
+      height: 1050px;
+    }
+    @include mobile {
+      height: 960px;
     }
     .left {
       @extend %stickyPic;
@@ -159,10 +166,25 @@
         width: 40%;
         .pic {
           width: 235px;
-          height: 175px;
+          height: calc(235px / 1.34);
           overflow: hidden;
           border: 15px solid $color_green;
           margin: 0 auto;
+          img {
+            width: 100%;
+          }
+          @include desktop {
+            width: 200px;
+            height: calc(200px / 1.34);
+          }
+          @include pad {
+            width: 180px;
+            height: calc(180px / 1.34);
+          }
+          @include mobile {
+            width: 140px;
+            height: calc(140px / 1.34);
+          }
         }
         .address {
           margin: 10px 0;
