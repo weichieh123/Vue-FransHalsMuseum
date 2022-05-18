@@ -61,11 +61,17 @@
         background-color: $color_dark;
         color: $color_yellow;
         margin-left: 40vw;
+        @include pad {
+          margin-left: 30vw;
+        }
       }
       &.second {
         background-color: $color_yellow;
         color: $color_dark;
         margin-left: 30vw;
+        @include pad {
+          margin-left: 13vw;
+        }
       }
     }
   }
@@ -73,8 +79,9 @@
     // width: fit-content;
     width: 100%;
     overflow: hidden;
-    height: 680px;
+    height: fit-content;
     background-color: $color_brown;
+    padding: 50px 0;
     .wrap {
       width: fit-content;
       display: flex;
@@ -83,17 +90,33 @@
       .card {
         position: relative;
         width: 400px;
-        height: 525px;
+        height: calc(400px * 1.31);
         background-color: $color_green;
         margin-right: 60px;
         padding: 30px;
         text-align: center;
+        @include desktop {
+          width: 340px;
+          height: calc(340px * 1.31);;
+        }
+        @include pad {
+          width: 280px;
+          height: calc(280px * 1.31);;
+        }
         .pic {
           width: 350px;
           height: 350px;
           overflow: hidden;
           margin: 0 auto;
           margin-bottom: 30px;
+          @include desktop {
+            width: 280px;
+            height: 280px;
+          }
+          @include pad {
+            width: 220px;
+            height: 220px;
+          }
           img {
             height: 100%;
             &.notSquare {
@@ -118,10 +141,18 @@
             font-size: 45px;
             line-height: 45px;
             font-weight: 600;
+            @include desktop {
+              font-size: 32px;
+            line-height: 32px;
+            }
             &.isLong {
               // 字太長的情況
               font-size: 30px;
               line-height: 30px;
+              @include desktop {
+                font-size: 26px;
+              line-height: 26px;
+              }
             }
           }
         }
@@ -213,6 +244,10 @@
     height: 910px;
     background-color: $color_purple;
     position: relative;
+    @include desktop {
+      height: fit-content;
+      padding-bottom: 60px;
+    }
     .left {
       @extend %stickyPic;
       @include desktop {
