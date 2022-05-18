@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+$color_darkOpa: rgba(35, 31, 32, 0.25);
 $color_dark: #231f20;
 $color_yellow: #fce373;
 $color_brown: #cca69a;
@@ -7,6 +8,26 @@ $color_green: #9cd08e;
 $color_orange: #f37449;
 $color_lightOrange: #F29C50;
 $color_purple: #a385bd;
+
+// @mixin desktop {
+//   @media (max-width: 1020px){
+//       @content;
+//   }
+// }
+// @mixin pad {
+//   @media (max-width: 768px){
+//       @content;
+//   }
+// }
+// @mixin mobile {
+//   @media (max-width: 320px){
+//       @content;
+//   }
+// }
+
+* {
+  box-sizing: border-box;
+}
 
 %stickyPic {
   width: 512px;
@@ -16,6 +37,11 @@ $color_purple: #a385bd;
   position: -webkit-sticky;
   top: 0;
   left: 0;
+  // @include desktop {
+  //   position: relative;
+  //   width: 100vw;
+  //   height: 400px;
+  // }
   .pic {
     height: 50vh;
     overflow: hidden;
@@ -33,6 +59,10 @@ $color_purple: #a385bd;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  // @include desktop {
+  //   position: relative;
+  //   width: 100vw;
+  // }
   h2 {
     width: 100%;
     font-size: 100px;

@@ -116,6 +116,55 @@
         </div>
       </div>
     </div>
+    <!-- footer section -->
+    <div class="footer-section">
+      <div class="footer-card left">
+        <span>Newsletter</span>
+        <h4>Frans likes to send you emails</h4>
+        <input type="text" placeholder="Name" />
+        <input type="text" placeholder="Email" />
+        <br>
+        <button>signup</button>
+      </div>
+      <div class="footer-card right">
+        <span>One museum two locations</span>
+        <div class="location">
+          <div class="footer-icon"></div>
+          <p>HOF</p>
+          <span> Groot Heiligland 62</span><br />
+          <span> 2011 ES Haarlem </span><br />
+          <a href="">Opening hours</a>
+        </div>
+        <div class="location">
+          <div class="footer-icon"></div>
+          <p>HOF</p>
+          <span> Grote Markt 16</span><br />
+          <span> 2011 RD Haarlem </span><br />
+          <a href="">Opening hours</a>
+        </div>
+      </div>
+      <div class="footer-row">
+        <div class="footer-menu">
+          <div class="icon"><img :src="footerIcon1" alt=""></div>
+          <div class="icon"><img :src="footerIcon2" alt=""></div>
+          <div class="icon"><img :src="footerIcon3" alt=""></div>
+        </div>
+        <div class="footer-menu">
+          <ul>
+            <li>Term</li>
+            <li>About us</li>
+            <li>FAQ</li>
+            <li>Contact</li>
+            <li>Colophon</li>
+            <li>Curators</li>
+          </ul>
+        </div>
+        <div class="footer-menu">
+          <div class="logo"></div>
+          <div class="logo"></div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script setup>
@@ -128,6 +177,9 @@ import newPic1 from '@/assets/images/newPic-top.jpeg';
 import newPic2 from '@/assets/images/newPic-bottom.jpeg';
 import newPic3 from '@/assets/images/newPic-right1.png';
 import newPic4 from '@/assets/images/newPic-right2.jpg';
+import footerIcon1 from '@/assets/images/facebook.svg';
+import footerIcon2 from '@/assets/images/twitter.svg';
+import footerIcon3 from '@/assets/images/instagram.svg';
 import ePics from './home';
 </script>
 <style lang="scss" scoped>

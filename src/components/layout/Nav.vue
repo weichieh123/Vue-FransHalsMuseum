@@ -43,6 +43,7 @@ const isOpen = ref(false);
     width: 24px;
     padding: 10px;
     margin: 5px 0;
+    box-sizing: content-box;
     &.rotate {
       transform: rotate(-45deg);
     }
