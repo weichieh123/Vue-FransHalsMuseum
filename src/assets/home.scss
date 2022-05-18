@@ -16,7 +16,7 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-around;
     .logo {
       width: 150px;
       height: 70px;
@@ -29,11 +29,9 @@
       }
     }
     h1 {
-      font-size: 160px;
       margin: 0;
     }
-    p {
-      font-size: 22px;
+    h4 {
       margin-top: 20px;
     }
   }
@@ -170,24 +168,21 @@
           margin: 10px 0;
           h5 {
             margin: 5px 0;
-            font-size: 21px;
+            // font-size: 21px;
           }
           p {
             margin: 0;
-            font-size: 18px;
           }
         }
       }
       h4 {
         margin: 50px 0 20px 0;
         width: 100%;
-        font-size: 26px;
         font-weight: 500;
       }
       .content {
         width: 80%;
         margin: 0 auto;
-        font-size: 20px;
       }
     }
   }
@@ -254,7 +249,6 @@
           }
           p {
             margin: 20px auto;
-            font-size: 24px;
             font-weight: 600;
           }
         }
@@ -274,6 +268,7 @@
     text-align: center;
     @include desktop {
       height: 1000px;
+      margin-bottom: 52px;
     }
     .footer-card {
       width: 50%;
@@ -286,7 +281,6 @@
         width: 100%;
       }
       h4 {
-        font-size: 30px;
         margin-top: 20px;
       }
       input {

@@ -9,8 +9,76 @@ $color_orange: #f37449;
 $color_lightOrange: #F29C50;
 $color_purple: #a385bd;
 
+$breakpoints: (
+  small : 480px,
+  medium: 640px, // Previously 640px
+  large : 1024px
+);
+
+$p-font-sizes: (
+  null  : 14px,
+  480px : 15px,
+  640px : 17px,
+  1024px: 20px
+);
+
+$h1-font-sizes: (
+  null  : 60px,
+  480px : 80px,
+  640px : 120px,
+  1024px: 160px
+);
+$h2-font-sizes: (
+  null  : 50px,
+  480px : 60px,
+  640px : 80px,
+  1024px: 100px
+);
+$h4-font-sizes: (
+  null  : 18px,
+  480px : 20px,
+  640px : 24px,
+  1024px: 26px
+);
+$h5-font-sizes: (
+  null  : 14px,
+  480px : 16px,
+  640px : 18px,
+  1024px: 21px
+);
+
+
+@mixin font-size($fs-map) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      font-size: $fs-font-size;
+    }
+    @else {
+      @media screen and (min-width: $fs-breakpoint) {
+        font-size: $fs-font-size;
+      }
+    }
+  }
+}
+
+p {
+  @include font-size($p-font-sizes);
+}
+h1 {
+  @include font-size($h1-font-sizes);
+}
+h2 {
+  @include font-size($h2-font-sizes);
+}
+h4 {
+  @include font-size($h4-font-sizes);
+}
+h5 {
+  @include font-size($h5-font-sizes);
+}
+
 @mixin desktop {
-  @media (max-width: 1020px){
+  @media (max-width: 1024px){
       @content;
   }
 }
@@ -65,7 +133,6 @@ $color_purple: #a385bd;
   }
   h2 {
     width: 100%;
-    font-size: 100px;
     margin: 60px 0;
   }
 }

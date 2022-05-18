@@ -4,7 +4,7 @@
     <div class="hero-section">
       <div class="logo"><img :src="logo" alt="" /></div>
       <h1>WELCOME</h1>
-      <p>Location Hof: Museum in Bloom</p>
+      <h4>Location Hof: Museum in Bloom</h4>
     </div>
     <!-- button section -->
     <div class="button-row first">
