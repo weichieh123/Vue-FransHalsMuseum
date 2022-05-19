@@ -23,9 +23,16 @@
     margin: 5px 0;
     box-sizing: content-box;
     cursor: pointer;
+    &:hover {
+        animation: nav-shaking 0.3s;
+    }
     &.rotate {
       transform: rotate(-45deg);
+      &:hover {
+          animation: shaking 0.3s;
+      }
     }
+
   }
   .menu {
     width: 55px;
@@ -36,6 +43,9 @@
     border: 5px solid $color_dark;
     margin-right: -10px;
     cursor: pointer;
+    &:hover {
+        animation: nav-shaking 0.3s;
+    }
     .line {
       display: block;
       position: absolute;
