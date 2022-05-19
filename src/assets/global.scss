@@ -100,6 +100,7 @@ h5 {
 %stickyPic {
   width: 512px;
   height: 100vh;
+  max-height: 760px;
   background-color: #fff;
   position: sticky;
   position: -webkit-sticky;
@@ -111,7 +112,7 @@ h5 {
     height: 400px;
   }
   .pic {
-    height: 50vh;
+    height: 50%;
     overflow: hidden;
     @include desktop {
       height: 200px;
