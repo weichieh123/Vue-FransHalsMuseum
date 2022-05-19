@@ -69,18 +69,10 @@
     }
   }
 }
-.nav-menu-list {
+.nav-menu-list.desktop {
+  @extend %menu-list;
   width: 36vw;
   height: 100vh;
-  background-color: $color_brown;
-  z-index: 99;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  bottom: 0;
-  transition: all 1s ease;
   &.inactive {
     left: -35vw;
     bottom: 0;
@@ -90,47 +82,34 @@
     bottom: 0;
   }
   @include desktop {
-    width: 100vw;
-    height: 290px;
-    padding: 20px 0;
-    transition: all 1s ease;
-    &.inactive {
-      bottom: -290px;
-      left: 0;
-    }
-    &.active {
-      bottom: 52px;
-      left: 0;
-    }
+    display: none;
+  }
+}
+.nav-menu-list.mobile {
+  @extend %menu-list;
+  width: 100vw;
+  height: 290px;
+  padding: 20px 0;
+  display: none;
+  @include desktop {
+      display: flex;
+  }
+  &.inactive {
+    bottom: -290px;
+    left: 0;
+  }
+  &.active {
+    bottom: 52px;
+    left: 0;
   }
   .list-button {
-    position: relative;
-    font-size: 30px;
-    font-weight: 600;
-    line-height: 80px;
-    text-align: center;
-    width: 80%;
-    height: 80px;
-    cursor: pointer;
-    &:not(:last-child) {
-      border-bottom: 2px solid $color_dark;
-    }
-    @include desktop {
-      height: 62px;
-      line-height: 62px;
-      font-size: 26px;
-    }
+    height: 62px;
+    line-height: 62px;
+    font-size: 26px;
     .list-icon {
-      width: 22px;
-      height: 22px;
-      position: absolute;
-      right: 5px;
-      top: 30px;
-      @include desktop {
-        top: 20px;
-        width: 20px;
-        height: 20px;
-      }
+      top: 20px;
+      width: 20px;
+      height: 20px;
     }
   }
 }

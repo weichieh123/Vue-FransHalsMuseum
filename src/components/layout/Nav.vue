@@ -18,7 +18,21 @@
       <el-icon><Location /></el-icon>
     </div>
   </div>
-  <div class="nav-menu-list" :class="[isOpen ? 'active' : 'inactive']">
+  <div class="nav-menu-list desktop" :class="[isOpen ? 'active' : 'inactive']">
+    <div class="list-button">
+      <span>VISIT</span> <el-icon><DArrowRight class="list-icon" /></el-icon>
+    </div>
+    <div class="list-button">
+      <span>LEARN</span> <el-icon><DArrowRight class="list-icon" /></el-icon>
+    </div>
+    <div class="list-button">
+      <span>SUPPORT</span> <el-icon><DArrowRight class="list-icon" /></el-icon>
+    </div>
+    <div class="list-button">
+      <span>ABOUT</span> <el-icon><DArrowRight class="list-icon" /></el-icon>
+    </div>
+  </div>
+  <div class="nav-menu-list mobile" :class="[isOpen ? 'active' : 'inactive']">
     <div class="list-button">
       <span>VISIT</span> <el-icon><DArrowRight class="list-icon" /></el-icon>
     </div>
