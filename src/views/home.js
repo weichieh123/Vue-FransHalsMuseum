@@ -27,6 +27,20 @@ const ePics = [
     img: 'ePic4.jpg',
     isSquare: true,
   },
+  {
+    title: '18th Centry Dollhouse',
+    isLong: true,
+    time: '01 Oct 2020',
+    img: 'ePic5.jpg',
+    isSquare: false,
+  },
+  {
+    title: 'Draw a Colourful Portrait in Studio F',
+    isLong: true,
+    time: '23 Dec 2021',
+    img: 'ePic6.png',
+    isSquare: false,
+  },
 ];
 
 export default ePics;
